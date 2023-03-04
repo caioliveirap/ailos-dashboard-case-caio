@@ -1,11 +1,4 @@
 import {
-  animate,
-  keyframes,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
-import {
   Component,
   Output,
   EventEmitter,
