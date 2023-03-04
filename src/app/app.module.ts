@@ -8,8 +8,14 @@ import { MatDividerModule } from '@angular/material/divider';
 import { HeaderComponent } from './header/header.component';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NewCooperateAdmissionComponent } from './dashboard/register/cooperate-admission/new-cooperate-admission/new-cooperate-admission.component';
 @NgModule({
-  declarations: [AppComponent, SidenavComponent, HeaderComponent],
+  declarations: [
+    AppComponent,
+    SidenavComponent,
+    HeaderComponent,
+    NewCooperateAdmissionComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
