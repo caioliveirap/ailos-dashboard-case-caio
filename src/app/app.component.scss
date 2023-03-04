@@ -1,0 +1,15 @@
+@import "src/colors.scss";
+
+:host {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+mat-drawer-content {
+  background: $pattens-blue;
+}
+
+mat-drawer-container {
+  height: 100%;
+}

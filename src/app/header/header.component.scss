@@ -1,0 +1,86 @@
+@import "src/colors.scss";
+
+.header {
+  background: white;
+  padding: 20px 24px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  .title-wrapper {
+    .header-title {
+      font-family: "Exo 2";
+      font-weight: 700;
+      font-size: 24px;
+      line-height: 32px;
+      color: $neutral-10;
+    }
+    .breadcrumbs {
+      font-weight: 400;
+      font-size: 12px;
+      line-height: 18px;
+      color: $subtle-text-color;
+    }
+  }
+
+  .profile-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    .notifications {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      .notification-icon {
+        position: relative;
+        cursor: pointer;
+        .notification-amount {
+          position: absolute;
+          width: 16px;
+          height: 16px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: #ff0000;
+          border-radius: 100%;
+          right: 0;
+          font-weight: 700;
+          color: white;
+          font-size: 10px;
+          line-height: 14px;
+        }
+      }
+      button {
+        outline: none;
+        border: none;
+        background: none;
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+    }
+
+    .profile-settings {
+      position: relative;
+      cursor: pointer;
+      .gear-icon {
+        position: absolute;
+        width: 15px;
+        height: 15px;
+        bottom: 2px;
+        right: 0px;
+      }
+      .profile-settings_picture {
+        img {
+          width: 40px;
+          height: 40px;
+          object-fit: cover;
+          border-radius: 100%;
+          border: 1px solid #125d79;
+        }
+      }
+    }
+  }
+}

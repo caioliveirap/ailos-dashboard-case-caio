@@ -1,0 +1,30 @@
+<div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
+  <div class="logo-container">
+    <img src="assets/logo_ailos.png" alt="" class="ailos_logo" />
+    <div class="logo-text" *ngIf="collapsed">Ailos</div>
+  </div>
+  <div class="sidenav-nav-item menu-item" (click)="toggleCollapse()">
+    <div class="menu-wrapper">
+      <img
+        src="assets/sidenav_icons/sidenav_menu.svg"
+        class="menu-icon"
+        alt=""
+      />
+    </div>
+  </div>
+  <ul class="sidenav-nav">
+    <li class="sidenav-nav-item" *ngFor="let data of navData">
+      <a
+        class="sidenav-nav-link"
+        [routerLink]="[data.routeLink]"
+        routerLinkActive="active"
+        [routerLinkActiveOptions]="{ exact: true }"
+      >
+        <img [src]="data.icon_src" class="sidenav-link-icon" alt="" />
+        <span class="sidenav-link-text" *ngIf="collapsed">
+          {{ data.label }}
+        </span>
+      </a>
+    </li>
+  </ul>
+</div>
