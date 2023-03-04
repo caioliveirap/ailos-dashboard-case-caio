@@ -1,12 +1,15 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
-  <!-- <span>teste</span> -->
   <div class="logo-container">
     <img src="assets/logo_ailos.png" alt="" class="ailos_logo" />
     <div class="logo-text" *ngIf="collapsed">Ailos</div>
   </div>
   <div class="sidenav-nav-item menu-item" (click)="toggleCollapse()">
     <div class="menu-wrapper">
-      <img src="assets/ailos_icons/sidenav_menu.svg" class="menu-icon" alt="" />
+      <img
+        src="assets/sidenav_icons/sidenav_menu.svg"
+        class="menu-icon"
+        alt=""
+      />
     </div>
   </div>
   <ul class="sidenav-nav">
