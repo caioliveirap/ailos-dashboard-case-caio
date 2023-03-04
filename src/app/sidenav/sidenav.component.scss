@@ -1,0 +1,95 @@
+@import "src/colors.scss";
+
+.sidenav {
+  background: $ailos-blue;
+  transition: all 0.3s ease;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  width: 6.25rem;
+  height: 100vh;
+  .logo-container {
+    display: flex;
+    align-items: center;
+    padding: 20px 20px 0px 20px;
+    width: 100%;
+
+    .ailos_logo {
+      width: 60px;
+      height: 60px;
+    }
+
+    .logo-text {
+      margin-left: 1.5rem;
+      font-size: 24px;
+      font-weight: 700;
+      color: $white;
+    }
+  }
+}
+
+.sidenav-collapsed {
+  width: 16.5625rem;
+}
+
+.menu-item {
+  margin: 36px 35px;
+  .menu-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30px;
+    cursor: pointer;
+    .menu-icon {
+      width: 20px;
+    }
+  }
+  .sidenav-link-icon {
+    width: 20px;
+  }
+}
+
+.sidenav-nav {
+  list-style: none;
+  margin: 0;
+  margin: 0 35px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  gap: 30px;
+
+  .sidenav-nav-item {
+    width: 100%;
+
+    .sidenav-nav-link {
+      display: flex;
+      align-items: center;
+      color: $white;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      height: 100%;
+      width: 100%;
+      min-width: 30px;
+
+      .sidenav-link-icon {
+        width: 30px;
+        text-align: center;
+      }
+
+      .sidenav-link-text {
+        margin-left: 1.5rem;
+      }
+    }
+  }
+}
+
+.active {
+  background-color: $white;
+
+  .sidenav-link-icon,
+  .sidenav-link-text {
+    color: $ailos-black;
+  }
+}
