@@ -1,3 +1,24 @@
+<div class="steeper-bar">
+  <ul class="stepper">
+    <li class="step">
+      <div class="step-bullet current-item"></div>
+      <span class="step-label current-item">Início</span>
+    </li>
+    <li class="step">
+      <div class="step-bullet"></div>
+      <span class="step-label">Documentos</span>
+    </li>
+    <li class="step">
+      <div class="step-bullet"></div>
+      <span class="step-label">Dados Cadastrais</span>
+    </li>
+    <li class="step">
+      <div class="step-bullet"></div>
+      <span class="step-label">Admissão</span>
+    </li>
+  </ul>
+</div>
+
 <div class="new-cooperate-wrapper">
   <section class="new-cooperate-input-section">
     <div class="title-information">
@@ -25,7 +46,7 @@
             class="assistant-text"
             *ngIf="invalidCPF"
             [ngClass]="invalidCPF ? 'error' : ''"
-            >Insira um CPF válido</span
+            >Informe um CPF válido</span
           >
         </div>
 
