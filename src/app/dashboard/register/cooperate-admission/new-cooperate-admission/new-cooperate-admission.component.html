@@ -11,13 +11,25 @@
     <div class="consultation-field">
       <label class="cpf-label" for="cpf-field">CPF</label>
       <div class="consultation-field_input">
-        <input id="cpf-field" name="cpf-field" type="text" />
-        <button type="button">Consultar por CPF</button>
+        <input
+          id="cpf-field"
+          name="cpf-field"
+          type="text"
+          [(ngModel)]="cpfConsultationValue"
+        />
+        <button type="button" (click)="searchCooperateWithCPF()">
+          <span *ngIf="!isLoadingCooperate">Consulta por CPF</span>
+          <img
+            src="assets/loading_spinner.svg"
+            alt=""
+            *ngIf="isLoadingCooperate"
+          />
+        </button>
       </div>
     </div>
   </section>
 
-  <section class="results-section">
+  <section class="results-section" *ngIf="selectedCooperate">
     <div class="card-structure">
       <div class="card-header">
         <h1 class="title">Situação cadastral do CPF</h1>
