@@ -9,17 +9,32 @@
       </p>
     </div>
     <div class="consultation-field">
-      <label class="cpf-label" for="cpf-field">CPF</label>
       <div class="consultation-field_input">
-        <input
-          id="cpf-field"
-          name="cpf-field"
-          type="text"
-          mask="000.000.000-00"
-          [(ngModel)]="cpfConsultationValue"
-        />
-        <button type="button" (click)="searchCooperateWithCPF()">
-          <span *ngIf="!isLoadingCooperate">Consulta por CPF</span>
+        <div class="input-component">
+          <label class="cpf-label" for="cpf-field">CPF</label>
+          <input
+            id="cpf-field"
+            name="cpf-field"
+            type="text"
+            mask="000.000.000-00"
+            placeholder="000.000.000-00"
+            [ngClass]="invalidCPF ? 'error' : ''"
+            [(ngModel)]="cpfConsultationValue"
+          />
+          <span
+            class="assistant-text"
+            *ngIf="invalidCPF"
+            [ngClass]="invalidCPF ? 'error' : ''"
+            >Insira um CPF válido</span
+          >
+        </div>
+
+        <button
+          type="button"
+          (click)="searchCooperateWithCPF()"
+          [ngClass]="isConsultationAvailable ? '' : 'disabled'"
+        >
+          <span *ngIf="!isLoadingCooperate">Consultar por CPF</span>
           <img
             src="assets/loading_spinner.svg"
             alt=""
