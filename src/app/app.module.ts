@@ -11,6 +11,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewCooperateAdmissionComponent } from './dashboard/register/cooperate-admission/new-cooperate-admission/new-cooperate-admission.component';
 import { FormsModule } from '@angular/forms';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
+import { AlertModalComponent } from './components/alert-modal/alert-modal.component';
+import { MatDialogModule } from '@angular/material/dialog';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     SidenavComponent,
     HeaderComponent,
     NewCooperateAdmissionComponent,
+    AlertModalComponent,
   ],
   imports: [
     BrowserModule,
@@ -28,6 +31,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
     FormsModule,
     NgxMaskDirective,
     NgxMaskPipe,
+    MatDialogModule,
   ],
   providers: [provideNgxMask()],
   bootstrap: [AppComponent],

@@ -1,0 +1,51 @@
+@import "src/colors.scss";
+
+.modal {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 4;
+  .modal-dialog {
+    display: flex;
+    flex-direction: column;
+    background-color: $white;
+    border-radius: 2px;
+    border: 1px solid $critic-red;
+    padding: 15px;
+    width: 43.75rem;
+    max-width: 90%;
+    .modal-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      .modal-header {
+        font-size: 14px;
+        line-height: 19px;
+        color: black;
+        display: flex;
+        flex-direction: column;
+        gap: 3px;
+        .modal-title {
+          font-weight: 700;
+        }
+        .modal-complementary-text {
+          font-weight: 400;
+        }
+      }
+      .modal-body {
+        button {
+          background: none;
+          border: none;
+          outline: none;
+          cursor: pointer;
+        }
+      }
+    }
+  }
+}

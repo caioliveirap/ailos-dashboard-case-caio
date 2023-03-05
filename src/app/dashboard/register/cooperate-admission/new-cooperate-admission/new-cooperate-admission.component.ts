@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { registeredCooperates } from '../registered-cooperates';
 import { CooperatesInterface } from '../registered-cooperate.type';
-
 @Component({
   selector: 'app-new-cooperate-admission',
   templateUrl: './new-cooperate-admission.component.html',
@@ -48,7 +47,6 @@ export class NewCooperateAdmissionComponent {
         this.selectedCooperate = selectedCooperate;
         this.isConsultationAvailable = false;
       }
-
       this.isLoadingCooperate = false;
     }, 2000);
   }
