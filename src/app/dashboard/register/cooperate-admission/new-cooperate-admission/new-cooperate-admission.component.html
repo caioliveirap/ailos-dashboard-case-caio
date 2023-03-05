@@ -1,0 +1,112 @@
+<div class="new-cooperate-wrapper">
+  <section class="new-cooperate-input-section">
+    <div class="title-information">
+      <h1 class="title">Informe o CPF do futuro cooperado (a)</h1>
+      <p class="legend">
+        Se necessário, você poderá duplicar uma conta existente ou pausar e
+        retomar este cadastro futuramente. <br />
+        Digite apenas os números (sem pontos ou traços).
+      </p>
+    </div>
+    <div class="consultation-field">
+      <div class="consultation-field_input">
+        <div class="input-component">
+          <label class="cpf-label" for="cpf-field">CPF</label>
+          <input
+            id="cpf-field"
+            name="cpf-field"
+            type="text"
+            mask="000.000.000-00"
+            placeholder="000.000.000-00"
+            [ngClass]="invalidCPF ? 'error' : ''"
+            [(ngModel)]="cpfConsultationValue"
+          />
+          <span
+            class="assistant-text"
+            *ngIf="invalidCPF"
+            [ngClass]="invalidCPF ? 'error' : ''"
+            >Insira um CPF válido</span
+          >
+        </div>
+
+        <button
+          type="button"
+          (click)="searchCooperateWithCPF()"
+          [ngClass]="isConsultationAvailable ? '' : 'disabled'"
+        >
+          <span *ngIf="!isLoadingCooperate">Consultar por CPF</span>
+          <img
+            src="assets/loading_spinner.svg"
+            alt=""
+            *ngIf="isLoadingCooperate"
+          />
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="results-section" *ngIf="selectedCooperate">
+    <div class="card-structure">
+      <div class="card-header">
+        <h1 class="title">Situação cadastral do CPF</h1>
+        <span class="legend">Consulta na Receita Federal</span>
+      </div>
+      <div class="consultant-info">
+        <img src="assets/person-icon.svg" alt="" />
+        <div class="card-information">
+          <h6>Nome</h6>
+          <span>{{ selectedCooperate.name }}</span>
+        </div>
+      </div>
+      <div class="cpf-situation">
+        <img
+          *ngIf="selectedCooperate.isCPFRegular"
+          src="assets/check-circle.svg"
+          alt=""
+        />
+        <img
+          *ngIf="!selectedCooperate.isCPFRegular"
+          src="assets/error-circle.svg"
+          alt=""
+        />
+        <div class="card-information">
+          <h6>Situação do CPF</h6>
+          <span *ngIf="selectedCooperate.isCPFRegular">Regular</span>
+          <span *ngIf="!selectedCooperate.isCPFRegular">Irregular</span>
+        </div>
+      </div>
+    </div>
+    <div class="card-structure">
+      <div class="card-header">
+        <h1 class="title">Conta aplicação</h1>
+        <span class="legend">Cooperativa Viacredi</span>
+      </div>
+      <div class="consultant-info">
+        <img src="assets/card.svg" alt="" />
+        <div class="card-information">
+          <h6>Número da conta</h6>
+          <span>{{ selectedCooperate.applicationAccountNumber }}</span>
+        </div>
+      </div>
+      <div class="duplicate-account">
+        <a>Duplicar conta</a>
+      </div>
+    </div>
+    <div class="card-structure">
+      <div class="card-header">
+        <h1 class="title">Conta corrente</h1>
+        <span class="legend">Cooperativa Viacredi</span>
+      </div>
+      <div class="consultant-info">
+        <img src="assets/card.svg" alt="" />
+        <div class="card-information">
+          <h6>Número da conta</h6>
+          <span>{{ selectedCooperate.currentAccountNumber }}</span>
+        </div>
+      </div>
+      <div class="duplicate-account">
+        <a>Duplicar conta</a>
+      </div>
+    </div>
+  </section>
+</div>
