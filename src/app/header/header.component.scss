@@ -19,6 +19,9 @@
       font-size: 12px;
       line-height: 18px;
       color: $subtle-text-color;
+      .xng-breadcrumb-trail {
+        color: red !important;
+      }
     }
   }
 
