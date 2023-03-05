@@ -11,3 +11,11 @@
 body {
   position: relative;
 }
+
+.header-breadcrumb .xng-breadcrumb-trail {
+  color: $neutral-10;
+}
+
+.header-breadcrumb .xng-breadcrumb-link {
+  color: $subtle-text-color;
+}

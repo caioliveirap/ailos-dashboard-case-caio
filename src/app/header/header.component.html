@@ -1,8 +1,12 @@
 <div class="header">
   <div class="title-wrapper">
     <h1 class="header-title">NOVA ADMISSÃO COOPERADO</h1>
-    <span class="breadcrumbs"
-      >Cadastro / Admissão do Cooperado / Nova Admissão de Cooperado
+    <span class="breadcrumbs">
+      <xng-breadcrumb
+        class="header-breadcrumb"
+        [separator]="iconTemplate"
+      ></xng-breadcrumb>
+      <ng-template #iconTemplate> / </ng-template>
     </span>
   </div>
   <div class="profile-wrapper">
@@ -20,7 +24,6 @@
         <img src="assets/header/profile-placeholder.webp" alt="" />
       </div>
       <img class="gear-icon" src="assets/header/gear.svg" alt="" />
-      <!-- <img src="assets/header/profile-placeholder.webp" alt="" /> -->
     </div>
   </div>
 </div>

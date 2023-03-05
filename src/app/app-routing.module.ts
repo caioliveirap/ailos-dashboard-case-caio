@@ -4,8 +4,29 @@ import { NewCooperateAdmissionComponent } from './dashboard/register/cooperate-a
 
 const routes: Routes = [
   {
-    path: 'cadastro/admissao-cooperado/nova-admissao-cooperado',
+    path: 'cadastro',
     component: NewCooperateAdmissionComponent,
+    data: {
+      breadcrumb: 'Cadastro',
+    },
+    children: [
+      {
+        path: 'admissao-cooperado',
+        component: NewCooperateAdmissionComponent,
+        data: {
+          breadcrumb: 'Admissão do Cooperado',
+        },
+        children: [
+          {
+            path: 'nova-admissao-cooperado',
+            component: NewCooperateAdmissionComponent,
+            data: {
+              breadcrumb: 'Nova Admissão de Cooperado',
+            },
+          },
+        ],
+      },
+    ],
   },
 ];
 

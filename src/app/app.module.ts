@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { AlertModalComponent } from './components/alert-modal/alert-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
+import { BreadcrumbModule, BreadcrumbService } from 'xng-breadcrumb';
 
 @NgModule({
   declarations: [
@@ -32,8 +33,9 @@ import { MatDialogModule } from '@angular/material/dialog';
     NgxMaskDirective,
     NgxMaskPipe,
     MatDialogModule,
+    BreadcrumbModule,
   ],
-  providers: [provideNgxMask()],
+  providers: [provideNgxMask(), BreadcrumbService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
