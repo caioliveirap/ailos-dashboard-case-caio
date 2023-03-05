@@ -15,6 +15,7 @@
           id="cpf-field"
           name="cpf-field"
           type="text"
+          mask="000.000.000-00"
           [(ngModel)]="cpfConsultationValue"
         />
         <button type="button" (click)="searchCooperateWithCPF()">
@@ -39,14 +40,24 @@
         <img src="assets/person-icon.svg" alt="" />
         <div class="card-information">
           <h6>Nome</h6>
-          <span>Mariane de Sousa Oliveira</span>
+          <span>{{ selectedCooperate.name }}</span>
         </div>
       </div>
       <div class="cpf-situation">
-        <img src="assets/check-circle.svg" alt="" />
+        <img
+          *ngIf="selectedCooperate.isCPFRegular"
+          src="assets/check-circle.svg"
+          alt=""
+        />
+        <img
+          *ngIf="!selectedCooperate.isCPFRegular"
+          src="assets/error-circle.svg"
+          alt=""
+        />
         <div class="card-information">
           <h6>Situação do CPF</h6>
-          <span>Regular</span>
+          <span *ngIf="selectedCooperate.isCPFRegular">Regular</span>
+          <span *ngIf="!selectedCooperate.isCPFRegular">Irregular</span>
         </div>
       </div>
     </div>
@@ -59,11 +70,11 @@
         <img src="assets/card.svg" alt="" />
         <div class="card-information">
           <h6>Número da conta</h6>
-          <span>557932-4</span>
+          <span>{{ selectedCooperate.applicationAccountNumber }}</span>
         </div>
       </div>
       <div class="duplicate-account">
-        <a href="">Duplicar conta</a>
+        <a>Duplicar conta</a>
       </div>
     </div>
     <div class="card-structure">
@@ -75,11 +86,11 @@
         <img src="assets/card.svg" alt="" />
         <div class="card-information">
           <h6>Número da conta</h6>
-          <span>778461-8</span>
+          <span>{{ selectedCooperate.currentAccountNumber }}</span>
         </div>
       </div>
       <div class="duplicate-account">
-        <a href="">Duplicar conta</a>
+        <a>Duplicar conta</a>
       </div>
     </div>
   </section>

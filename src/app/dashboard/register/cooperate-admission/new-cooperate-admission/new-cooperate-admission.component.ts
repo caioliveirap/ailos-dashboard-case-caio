@@ -25,6 +25,7 @@ export class NewCooperateAdmissionComponent {
 
   searchCooperateWithCPF(): void {
     // NOTE: This setTimeout is just to simulate the loading of the search.
+    console.log(this.cpfConsultationValue);
     this.isLoadingCooperate = true;
     setTimeout(() => {
       this.selectedCooperate = registeredCooperates.find(
