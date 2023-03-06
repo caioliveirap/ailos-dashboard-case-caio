@@ -14,6 +14,7 @@ import { MatDialogModule } from '@angular/material/dialog';
 import { BreadcrumbModule, BreadcrumbService } from 'xng-breadcrumb';
 import { CustomCheckboxComponent } from './components/custom-checkbox/custom-checkbox.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { NewCooperateAdmissionInitialComponent } from './dashboard/register/cooperate-admission/new-cooperate-admission/Components/new-cooperate-admission-initial/new-cooperate-admission-initial.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
     NewCooperateAdmissionComponent,
     CustomCheckboxComponent,
     PageNotFoundComponent,
+    NewCooperateAdmissionInitialComponent,
   ],
   imports: [
     BrowserModule,
