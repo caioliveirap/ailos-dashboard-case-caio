@@ -2,26 +2,26 @@ export const navbarData = [
   {
     routeLink: 'dashboard',
     icon_src: 'assets/sidenav_icons/search.svg',
-    label: 'Ailos',
+    label: 'Procurar',
   },
   {
-    routeLink: 'products',
+    routeLink: 'favoritos',
     icon_src: 'assets/sidenav_icons/star.svg',
-    label: 'Ailos',
+    label: 'Favoritos',
   },
   {
-    routeLink: 'statistics',
+    routeLink: 'cadastro',
     icon_src: 'assets/sidenav_icons/message.svg',
-    label: 'Ailos',
+    label: 'Cadastro',
   },
   {
-    routeLink: 'statistics',
+    routeLink: 'atendimento',
     icon_src: 'assets/sidenav_icons/filter.svg',
-    label: 'Ailos',
+    label: 'Atendimento',
   },
   {
-    routeLink: 'statistics',
+    routeLink: 'more',
     icon_src: 'assets/sidenav_icons/temple.svg',
-    label: 'Ailos',
+    label: 'Demais telas',
   },
 ];
