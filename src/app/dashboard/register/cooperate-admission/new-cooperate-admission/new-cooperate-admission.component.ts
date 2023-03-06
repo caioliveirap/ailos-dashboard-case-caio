@@ -16,6 +16,10 @@ export class NewCooperateAdmissionComponent {
   isConsultationAvailable: boolean = true;
   isChecklistOpened: boolean = false;
 
+  knowCooperateCheck: boolean = false;
+  talkAboutCooperativeCheck: boolean = false;
+  necessaryDocumentsCheck: boolean = false;
+
   steps: String[] = ['Início', 'Documentos', 'Dados Cadastrais', 'Admissão'];
   currentStep: number = 0;
 
