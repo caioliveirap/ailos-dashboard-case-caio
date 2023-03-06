@@ -77,12 +77,20 @@
 
 .checklist-account-openning__sidenav {
   .background {
-    background-color: rgb(5, 16, 20, 0.4);
+    background: transparent;
+    // background-color: rgb(5, 16, 20, 0.4);
     width: 100%;
     position: absolute;
     height: 100%;
     top: 0;
     bottom: 0;
+    pointer-events: none;
+    transition: 0.2s ease-in-out all;
+  }
+
+  .background-opened {
+    background-color: rgb(5, 16, 20, 0.4);
+    transition: 0.2s ease-in-out all;
   }
   mat-sidenav-container {
     width: 100%;
@@ -107,6 +115,7 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+      pointer-events: all;
       .header-content {
         padding-top: 60px;
         h1 {

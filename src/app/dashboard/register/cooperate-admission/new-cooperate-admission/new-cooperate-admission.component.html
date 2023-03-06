@@ -43,7 +43,9 @@
     <button
       type="button"
       class="account-openning-tips secondary-button"
-      (click)="isChecklistOpened = !isChecklistOpened"
+      (click)="
+        isChecklistOpened = !isChecklistOpened; checklistSidenav.toggle()
+      "
     >
       Dicas para abertura de conta
     </button>
@@ -53,10 +55,11 @@
 <div class="checklist-account-openning__sidenav">
   <div
     class="content-wrapper"
-    [ngClass]="isChecklistOpened ? 'background' : ''"
+    class="background"
+    [ngClass]="isChecklistOpened ? 'background-opened' : ''"
   >
     <mat-sidenav-container>
-      <mat-sidenav [(opened)]="isChecklistOpened" position="end">
+      <mat-sidenav #checklistSidenav position="end">
         <div class="checklist-account-openning__wrapper">
           <div class="checklist-account-openning__content">
             <div class="header-content">
@@ -82,7 +85,10 @@
               <button
                 type="button"
                 class="secondary-button"
-                (click)="isChecklistOpened = !isChecklistOpened"
+                (click)="
+                  checklistSidenav.toggle();
+                  isChecklistOpened = !isChecklistOpened
+                "
               >
                 Continuar atendimento
               </button>
