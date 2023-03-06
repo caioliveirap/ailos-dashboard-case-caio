@@ -1,27 +1,53 @@
-# AilosDashboardCase
+# Projeto para o Processo Seletivo da GFT
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.2.1.
+Este é um projeto para o processo seletivo da Empresa GFT. O projeto foi desenvolvido utilizando Angular 15.2.1 e Node v16.19.1. O objetivo do projeto é criar uma aplicação web que permite a gestão de tarefas de uma equipe.
 
-## Development server
+## Instalação
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+- Rode o projeto utilizando `npm install`
+- Execute utilizando `npm start`
+- Acesse em [http://localhost:4200/](http://localhost:4200/)
+- A URL do projeto pode ser acessada de qualquer icone na sidenav ou em [http://localhost:4200/cadastro/admissao-cooperado/nova-admissao-cooperado](http://localhost:4200/cadastro/admissao-cooperado/nova-admissao-cooperado)
 
-## Code scaffolding
+## Descritivo do projeto
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+Há dois caminhos possíveis, o primeiro sendo de CPF válido, e outro de CPF inválido (tanto em formatação quanto CPF não encontrado na database). A fim de simular uma situação real de requisição, coloquei um timeout na função junto a um loading, além disso, há os seguintes dados de mockup:
 
-## Build
+```
+Name: Ana Luiza da Silva Santos
+CPF do Cooperado: 44455566677
+CPF regular: false
+Número da conta de aplicação: 111222-3
+Número da conta corrente: 444444-1
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+Name: Pedro Henrique Alves Costa
+CPF do Cooperado: 88899900011
+CPF Regular: true
+Número da conta de aplicação: 777888-2
+Número da conta corrente: 222111-9
 
-## Running unit tests
+Name: Gabriela Lima Santos
+CPF do Cooperado: 33344455566
+CPF Regular: true
+Número da conta de aplicação: 123456-7
+Número da conta corrente: 987654-3
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+Name: Lucas Oliveira Rodrigues
+CPF do Cooperado: 66677788899
+CPF Regular: true
+Número da conta de aplicação: 444555-6
+Número da conta corrente: 333222-0
 
-## Running end-to-end tests
+Name: Isabela Fernandes Souza
+CPF do Cooperado: 11122233344
+CPF Regular: true
+Número da conta de aplicação: 555444-3
+Número da conta corrente: 666777-5
+```
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+## Funcionalidades
 
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+- Sidenav responsiva
+- Breadcrumbs responsivos de acordo com a URL.
+- Sidenav da checklist funcional
+- Busca por CPF, e feedback de erro de formatação e não encontrado
