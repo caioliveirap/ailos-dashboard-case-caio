@@ -1,10 +1,11 @@
-import { Component } from '@angular/core';
+import { Component, ViewEncapsulation } from '@angular/core';
 import { registeredCooperates } from '../registered-cooperates';
 import { CooperatesInterface } from '../registered-cooperate.type';
 @Component({
   selector: 'app-new-cooperate-admission',
   templateUrl: './new-cooperate-admission.component.html',
   styleUrls: ['./new-cooperate-admission.component.scss'],
+  encapsulation: ViewEncapsulation.None,
 })
 export class NewCooperateAdmissionComponent {
   cpfConsultationValue: string = '';
