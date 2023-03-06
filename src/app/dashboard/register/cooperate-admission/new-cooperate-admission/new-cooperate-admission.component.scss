@@ -24,6 +24,9 @@
         border: 2px solid $ailos-blue;
         background-color: $pattens-blue;
       }
+      &.step-passed {
+        background-color: $ailos-blue;
+      }
     }
     .step-label {
       font-weight: 400;
@@ -33,6 +36,9 @@
       color: $gray-4;
       margin-top: 14px;
       &.current-item {
+        color: $ailos-blue;
+      }
+      &.step-passed {
         color: $ailos-blue;
       }
     }

@@ -16,6 +16,9 @@ export class NewCooperateAdmissionComponent {
   isConsultationAvailable: boolean = true;
   isChecklistOpened: boolean = false;
 
+  steps: String[] = ['Início', 'Documentos', 'Dados Cadastrais', 'Admissão'];
+  currentStep: number = 0;
+
   setCooperateFound(cooperate: CooperatesInterface): void {
     this.selectedCooperate = cooperate;
   }

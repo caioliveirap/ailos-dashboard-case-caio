@@ -1,20 +1,25 @@
 <div class="steeper-bar">
   <ul class="stepper">
-    <li class="step">
-      <div class="step-bullet current-item"></div>
-      <span class="step-label current-item">Início</span>
-    </li>
-    <li class="step">
-      <div class="step-bullet"></div>
-      <span class="step-label">Documentos</span>
-    </li>
-    <li class="step">
-      <div class="step-bullet"></div>
-      <span class="step-label">Dados Cadastrais</span>
-    </li>
-    <li class="step">
-      <div class="step-bullet"></div>
-      <span class="step-label">Admissão</span>
+    <li
+      class="step"
+      *ngFor="let step of steps; index as i"
+      (click)="currentStep = i"
+    >
+      <div
+        class="step-bullet"
+        [ngClass]="{
+          'current-item': currentStep === i,
+          'step-passed': currentStep > i
+        }"
+      ></div>
+      <span
+        class="step-label"
+        [ngClass]="{
+          'current-item': currentStep === i,
+          'step-passed': currentStep > i
+        }"
+        >{{ step }}</span
+      >
     </li>
   </ul>
 </div>
