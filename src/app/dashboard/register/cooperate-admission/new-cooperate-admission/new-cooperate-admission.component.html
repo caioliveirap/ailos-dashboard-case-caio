@@ -135,7 +135,12 @@
 
 <div class="new-cooperate-footer">
   <div class="new-cooperate-footer__wrapper">
-    <button type="button" class="new-admission primary-button">
+    <button
+      type="button"
+      class="new-admission primary-button"
+      *ngIf="selectedCooperate"
+      (click)="resetCooperate()"
+    >
       Iniciar nova admissão
     </button>
     <button

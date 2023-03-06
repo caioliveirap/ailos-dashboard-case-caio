@@ -16,6 +16,11 @@ export class NewCooperateAdmissionComponent {
   isChecklistOpened: boolean = false;
   errorMessage: string = '';
 
+  resetCooperate(): void {
+    this.selectedCooperate = undefined;
+    this.isConsultationAvailable = true;
+  }
+
   validateCPF(cpf: string): boolean {
     // NOTE: This validation is limited because all the CPF's are fake.
     cpf = cpf.replace(/[^\d]+/g, '');
