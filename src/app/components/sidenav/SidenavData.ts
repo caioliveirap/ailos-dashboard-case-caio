@@ -1,26 +1,26 @@
 export const navbarData = [
   {
-    routeLink: 'dashboard',
+    routeLink: '/cadastro/admissao-cooperado/nova-admissao-cooperado',
     icon_src: 'assets/sidenav_icons/search.svg',
     label: 'Procurar',
   },
   {
-    routeLink: 'favoritos',
+    routeLink: '/cadastro/admissao-cooperado/nova-admissao-cooperado',
     icon_src: 'assets/sidenav_icons/star.svg',
     label: 'Favoritos',
   },
   {
-    routeLink: 'cadastro',
+    routeLink: '/cadastro/admissao-cooperado/nova-admissao-cooperado',
     icon_src: 'assets/sidenav_icons/message.svg',
     label: 'Cadastro',
   },
   {
-    routeLink: 'atendimento',
+    routeLink: '/cadastro/admissao-cooperado/nova-admissao-cooperado',
     icon_src: 'assets/sidenav_icons/filter.svg',
     label: 'Atendimento',
   },
   {
-    routeLink: 'more',
+    routeLink: '/cadastro/admissao-cooperado/nova-admissao-cooperado',
     icon_src: 'assets/sidenav_icons/temple.svg',
     label: 'Demais telas',
   },
