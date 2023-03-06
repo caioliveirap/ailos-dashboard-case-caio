@@ -1,5 +1,9 @@
 <label class="custom-checkbox">
-  <input type="checkbox" />
+  <input
+    type="checkbox"
+    [ngModel]="checked"
+    (ngModelChange)="onCheckedChange($event)"
+  />
   <span class="checkmark"></span>
   {{ label }}
 </label>

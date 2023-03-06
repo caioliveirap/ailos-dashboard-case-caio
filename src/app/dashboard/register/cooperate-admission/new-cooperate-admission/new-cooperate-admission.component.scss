@@ -78,7 +78,6 @@
 .checklist-account-openning__sidenav {
   .background {
     background: transparent;
-    // background-color: rgb(5, 16, 20, 0.4);
     width: 100%;
     position: absolute;
     height: 100%;
@@ -126,7 +125,7 @@
           width: 230px;
           padding-bottom: 20px;
         }
-        span {
+        .check-tips {
           font-weight: 400;
           font-size: 14px;
           line-height: 19px;
@@ -142,53 +141,65 @@
           display: flex;
           flex-direction: column;
           gap: 15px;
-
-          .custom-checkbox input {
-            position: absolute;
-            opacity: 0;
-          }
-
-          .custom-checkbox .checkmark {
-            display: inline-block;
-            width: 18px;
-            height: 18px;
-            border: 1px solid $ailos-black;
-            border-radius: 2px;
-            position: relative;
-          }
-
-          .custom-checkbox .checkmark:after {
-            content: "";
-            position: absolute;
-            display: none;
-          }
-          .custom-checkbox input:checked + .checkmark {
-            background-color: $ailos-orange;
-            border: none;
-          }
-          .custom-checkbox input:checked + .checkmark:after {
-            display: block;
-          }
-
-          .custom-checkbox .checkmark:after {
-            left: 6px;
-            top: 3px;
-            width: 4px;
-            height: 8px;
-            border: solid white;
-            border-width: 0 2px 2px 0;
-            transform: rotate(45deg);
-          }
-
-          .custom-checkbox {
+          .checkboxes__wrapper {
             display: flex;
-            gap: 8px;
-            align-items: center;
-            font-weight: 400;
-            font-size: 14px;
-            color: $ailos-black;
-            cursor: pointer;
+            flex-direction: column;
+            gap: 10px;
           }
+          .checkbox-list {
+            list-style-position: inside;
+            margin-left: 26px;
+            font-weight: 400;
+            font-size: 11px;
+            line-height: 15px;
+            color: $ailos-black;
+          }
+          // .custom-checkbox input {
+          //   position: absolute;
+          //   opacity: 0;
+          // }
+
+          // .custom-checkbox .checkmark {
+          //   display: inline-block;
+          //   width: 18px;
+          //   height: 18px;
+          //   border: 1px solid $ailos-black;
+          //   border-radius: 2px;
+          //   position: relative;
+          // }
+
+          // .custom-checkbox .checkmark:after {
+          //   content: "";
+          //   position: absolute;
+          //   display: none;
+          // }
+          // .custom-checkbox input:checked + .checkmark {
+          //   background-color: $ailos-orange;
+          //   border: none;
+          // }
+          // .custom-checkbox input:checked + .checkmark:after {
+          //   display: block;
+          // }
+
+          // .custom-checkbox .checkmark:after {
+          //   left: 6px;
+          //   top: 3px;
+          //   width: 4px;
+          //   height: 8px;
+          //   border: solid white;
+          //   border-width: 0 2px 2px 0;
+          //   transform: rotate(45deg);
+          // }
+
+          // .custom-checkbox {
+          //   display: flex;
+          //   gap: 8px;
+          //   align-items: center;
+          //   font-weight: 400;
+          //   font-size: 14px;
+          //   color: $ailos-black;
+          //   cursor: pointer;
+          // }
         }
       }
       .footer-content {

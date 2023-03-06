@@ -64,20 +64,56 @@
           <div class="checklist-account-openning__content">
             <div class="header-content">
               <h1>Check-list para abertura da conta</h1>
-              <span
+              <span class="check-tips"
                 >Confira algumas dicas que irão lhe ajudar neste atendimento
                 para que a admissão aconteça da melhor forma possível.</span
               >
               <div class="checkboxes">
-                <app-custom-checkbox
-                  label="Conheça seu cooperado"
-                ></app-custom-checkbox>
-                <app-custom-checkbox
-                  label="Fale sobre a Cooperativa"
-                ></app-custom-checkbox>
-                <app-custom-checkbox
-                  label="Documentos e comprovações necessárias"
-                ></app-custom-checkbox>
+                <div class="checkboxes__wrapper">
+                  <app-custom-checkbox
+                    [(checked)]="knowCooperateCheck"
+                    label="Conheça seu cooperado"
+                  ></app-custom-checkbox>
+                  <ul class="checkbox-list" *ngIf="knowCooperateCheck">
+                    <li>O que traz você até a Cooperativa?</li>
+                    <li>O que é mais importante na sua vida?</li>
+                    <li>Você tem algum sonho?</li>
+                  </ul>
+                </div>
+
+                <div class="checkboxes__wrapper">
+                  <app-custom-checkbox
+                    [(checked)]="talkAboutCooperativeCheck"
+                    label="Fale sobre a Cooperativa"
+                  ></app-custom-checkbox>
+                  <ul class="checkbox-list" *ngIf="talkAboutCooperativeCheck">
+                    <li>
+                      Modelo de Negócio: direito a voto, transparência na
+                      gestão, PROGRID, retorno das sobras, taxas atrativas;
+                    </li>
+                    <li>
+                      Rede de Atendimento: App, Conta Online, SAC, Caixas
+                      Eletrônicos (compartilhados entre as Cooperativas), Postos
+                      de Atendimento.
+                    </li>
+                  </ul>
+                </div>
+
+                <div class="checkboxes__wrapper">
+                  <app-custom-checkbox
+                    [(checked)]="necessaryDocumentsCheck"
+                    label="Documentos e comprovações necessárias"
+                  ></app-custom-checkbox>
+                  <ul class="checkbox-list" *ngIf="necessaryDocumentsCheck">
+                    <li>CPF regular na Receita Federal;</li>
+                    <li>
+                      Documento de Identificação (RG, CNH, Carteira de Trabalho,
+                      RNM, Carteira Profissional, Passaporte Brasileiro);
+                    </li>
+                    <li>Comprovante de endereço;</li>
+                    <li>Comprovante de renda.</li>
+                  </ul>
+                </div>
               </div>
             </div>
 
