@@ -8,6 +8,9 @@
   &:active {
     background: #023d55;
   }
+  &:hover {
+    background: #023d55;
+  }
   &.disabled {
     background: $ailos-blue-40;
     cursor: default;
