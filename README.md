@@ -57,3 +57,4 @@ Número da conta corrente: 666777-5
 - Breadcrumbs responsivos de acordo com a URL.
 - Sidenav da checklist funcional
 - Busca por CPF, e feedback de erro de formatação e não encontrado
+- Página de erro 404s

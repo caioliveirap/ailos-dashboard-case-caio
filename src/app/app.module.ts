@@ -1,6 +1,5 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SidenavComponent } from './components/sidenav/sidenav.component';
@@ -11,10 +10,10 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NewCooperateAdmissionComponent } from './dashboard/register/cooperate-admission/new-cooperate-admission/new-cooperate-admission.component';
 import { FormsModule } from '@angular/forms';
 import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
-import { AlertModalComponent } from './components/alert-modal/alert-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BreadcrumbModule, BreadcrumbService } from 'xng-breadcrumb';
 import { CustomCheckboxComponent } from './components/custom-checkbox/custom-checkbox.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
@@ -22,8 +21,8 @@ import { CustomCheckboxComponent } from './components/custom-checkbox/custom-che
     SidenavComponent,
     HeaderComponent,
     NewCooperateAdmissionComponent,
-    AlertModalComponent,
     CustomCheckboxComponent,
+    PageNotFoundComponent,
   ],
   imports: [
     BrowserModule,

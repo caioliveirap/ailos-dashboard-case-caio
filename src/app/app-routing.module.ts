@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { NewCooperateAdmissionComponent } from './dashboard/register/cooperate-admission/new-cooperate-admission/new-cooperate-admission.component';
 
 const routes: Routes = [
@@ -27,6 +28,14 @@ const routes: Routes = [
         ],
       },
     ],
+  },
+  {
+    path: '**',
+    pathMatch: 'full',
+    component: PageNotFoundComponent,
+    data: {
+      breadcrumb: '404 - Página não encontrada',
+    },
   },
 ];
 
