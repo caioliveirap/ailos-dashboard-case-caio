@@ -14,6 +14,7 @@ export class NewCooperateAdmissionComponent {
   isConsultationAvailable: boolean = true;
   invalidCPF: boolean = false;
   isChecklistOpened: boolean = false;
+  errorMessage: string = '';
 
   validateCPF(cpf: string): boolean {
     // NOTE: This validation is limited because all the CPF's are fake.
@@ -21,6 +22,7 @@ export class NewCooperateAdmissionComponent {
 
     if (cpf.length !== 11) {
       this.invalidCPF = true;
+      this.errorMessage = 'Informe um CPF válido';
       return false;
     }
 
@@ -48,6 +50,9 @@ export class NewCooperateAdmissionComponent {
       if (selectedCooperate) {
         this.selectedCooperate = selectedCooperate;
         this.isConsultationAvailable = false;
+      } else {
+        this.invalidCPF = true;
+        this.errorMessage = 'CPF não encontrado';
       }
       this.isLoadingCooperate = false;
     }, 2000);

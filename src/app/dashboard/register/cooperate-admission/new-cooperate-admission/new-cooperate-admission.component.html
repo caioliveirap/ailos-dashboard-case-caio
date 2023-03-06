@@ -46,7 +46,7 @@
             class="assistant-text"
             *ngIf="invalidCPF"
             [ngClass]="invalidCPF ? 'error' : ''"
-            >Informe um CPF válido</span
+            >{{ errorMessage }}</span
           >
         </div>
 
