@@ -5,7 +5,7 @@ import {
   OnInit,
   HostListener,
 } from '@angular/core';
-import { navbarData } from './NavbarData';
+import { navbarData } from './SidenavData';
 
 interface SideNavToggle {
   screenWidth: number;

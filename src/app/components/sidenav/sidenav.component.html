@@ -1,7 +1,11 @@
 <div class="sidenav" [ngClass]="collapsed ? 'sidenav-collapsed' : ''">
   <div class="logo-container">
     <img src="assets/logo_ailos.png" alt="" class="ailos_logo" />
-    <div class="logo-text" *ngIf="collapsed">Ailos</div>
+
+    <div class="logo-text" *ngIf="collapsed">
+      <h6>Ailos</h6>
+      <span>Sistema de cooperativas <br />de crédito</span>
+    </div>
   </div>
   <div class="sidenav-nav-item menu-item" (click)="toggleCollapse()">
     <div class="menu-wrapper">
