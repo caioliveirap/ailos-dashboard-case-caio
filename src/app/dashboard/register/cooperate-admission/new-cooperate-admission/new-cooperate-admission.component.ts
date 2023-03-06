@@ -13,6 +13,7 @@ export class NewCooperateAdmissionComponent {
   isLoadingCooperate: boolean = false;
   isConsultationAvailable: boolean = true;
   invalidCPF: boolean = false;
+  isChecklistOpened: boolean = false;
 
   validateCPF(cpf: string): boolean {
     // NOTE: This validation is limited because all the CPF's are fake.

@@ -1,0 +1,27 @@
+.primary-button {
+  background: $ailos-blue;
+  border-radius: 2px;
+  cursor: pointer;
+  color: white;
+  outline: none;
+  border: none;
+  &:active {
+    background: #023d55;
+  }
+  &.disabled {
+    background: $ailos-blue-40;
+    cursor: default;
+  }
+}
+
+.secondary-button {
+  background: transparent;
+  border-radius: 2px;
+  border: 1px solid $ailos-blue;
+  color: $ailos-blue;
+  cursor: pointer;
+  outline: none;
+  &:hover {
+    background: rgba(0, 76, 107, 0.1);
+  }
+}

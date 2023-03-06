@@ -1,0 +1,48 @@
+@import "src/colors.scss";
+
+.custom-checkbox input {
+  position: absolute;
+  opacity: 0;
+}
+
+.custom-checkbox .checkmark {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 1px solid $ailos-black;
+  border-radius: 2px;
+  position: relative;
+}
+
+.custom-checkbox .checkmark:after {
+  content: "";
+  position: absolute;
+  display: none;
+}
+.custom-checkbox input:checked + .checkmark {
+  background-color: $ailos-orange;
+  border: none;
+}
+.custom-checkbox input:checked + .checkmark:after {
+  display: block;
+}
+
+.custom-checkbox .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 4px;
+  height: 8px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.custom-checkbox {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-weight: 400;
+  font-size: 14px;
+  color: $ailos-black;
+  cursor: pointer;
+}

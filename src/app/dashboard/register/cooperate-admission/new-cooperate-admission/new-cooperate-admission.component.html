@@ -53,6 +53,7 @@
         <button
           type="button"
           (click)="searchCooperateWithCPF()"
+          class="primary-button"
           [ngClass]="isConsultationAvailable ? '' : 'disabled'"
         >
           <span *ngIf="!isLoadingCooperate">Consultar por CPF</span>
@@ -130,4 +131,63 @@
       </div>
     </div>
   </section>
+</div>
+
+<div class="new-cooperate-footer">
+  <div class="new-cooperate-footer__wrapper">
+    <button type="button" class="new-admission primary-button">
+      Iniciar nova admissão
+    </button>
+    <button
+      type="button"
+      class="account-openning-tips secondary-button"
+      (click)="isChecklistOpened = !isChecklistOpened"
+    >
+      Dicas para abertura de conta
+    </button>
+  </div>
+</div>
+
+<div class="checklist-account-openning__sidenav">
+  <div
+    class="content-wrapper"
+    [ngClass]="isChecklistOpened ? 'background' : ''"
+  >
+    <mat-sidenav-container>
+      <mat-sidenav [(opened)]="isChecklistOpened" position="end">
+        <div class="checklist-account-openning__wrapper">
+          <div class="checklist-account-openning__content">
+            <div class="header-content">
+              <h1>Check-list para abertura da conta</h1>
+              <span
+                >Confira algumas dicas que irão lhe ajudar neste atendimento
+                para que a admissão aconteça da melhor forma possível.</span
+              >
+              <div class="checkboxes">
+                <app-custom-checkbox
+                  label="Conheça seu cooperado"
+                ></app-custom-checkbox>
+                <app-custom-checkbox
+                  label="Fale sobre a Cooperativa"
+                ></app-custom-checkbox>
+                <app-custom-checkbox
+                  label="Documentos e comprovações necessárias"
+                ></app-custom-checkbox>
+              </div>
+            </div>
+
+            <div class="footer-content">
+              <button
+                type="button"
+                class="secondary-button"
+                (click)="isChecklistOpened = !isChecklistOpened"
+              >
+                Continuar atendimento
+              </button>
+            </div>
+          </div>
+        </div>
+      </mat-sidenav>
+    </mat-sidenav-container>
+  </div>
 </div>

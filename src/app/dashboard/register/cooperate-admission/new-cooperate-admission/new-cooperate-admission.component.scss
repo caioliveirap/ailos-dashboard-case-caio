@@ -98,20 +98,10 @@
         button {
           height: 34px;
           width: 10.75rem;
-          outline: none;
-          cursor: pointer;
-          border: none;
           padding: 6px 25px;
-          background: $ailos-blue;
-          color: $white;
-          font-weight: 600;
-          border-radius: 2px;
           font-size: 14px;
           line-height: 19px;
-          &.disabled {
-            background: $ailos-blue-40;
-            cursor: default;
-          }
+
           img {
             width: 20px;
             height: 20px;
@@ -239,6 +229,148 @@
           &:hover {
             background: $background;
           }
+        }
+      }
+    }
+  }
+}
+
+.new-cooperate-footer {
+  position: absolute;
+  background-color: white;
+  bottom: 0;
+  width: 100%;
+  padding: 15px 25px;
+  .new-cooperate-footer__wrapper {
+    display: flex;
+    gap: 15px;
+  }
+  .new-admission,
+  .account-openning-tips {
+    padding: 13px 25px;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+.checklist-account-openning__sidenav {
+  .background {
+    background-color: rgb(5, 16, 20, 0.4);
+    width: 100%;
+    position: absolute;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+  }
+  mat-sidenav-container {
+    width: 100%;
+    height: 100%;
+  }
+  mat-sidenav {
+    width: 100%;
+    position: absolute;
+    height: 100%;
+  }
+  .checklist-account-openning__wrapper {
+    display: flex;
+    justify-content: flex-end;
+    height: 100%;
+
+    .checklist-account-openning__content {
+      background-color: $white;
+      padding: 30px 40px;
+      width: 26.25rem;
+      max-width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      .header-content {
+        padding-top: 60px;
+        h1 {
+          font-weight: 400;
+          font-size: 22px;
+          line-height: 30px;
+          color: $neutral-10;
+          width: 230px;
+          padding-bottom: 20px;
+        }
+        span {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          color: $neutral-10;
+          width: 230px;
+        }
+        .checkboxes {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 19px;
+          color: $ailos-black;
+          padding-top: 16px;
+          display: flex;
+          flex-direction: column;
+          gap: 15px;
+
+          .custom-checkbox input {
+            position: absolute;
+            opacity: 0;
+          }
+
+          .custom-checkbox .checkmark {
+            display: inline-block;
+            width: 18px;
+            height: 18px;
+            border: 1px solid $ailos-black;
+            border-radius: 2px;
+            position: relative;
+          }
+
+          .custom-checkbox .checkmark:after {
+            content: "";
+            position: absolute;
+            display: none;
+          }
+          .custom-checkbox input:checked + .checkmark {
+            background-color: $ailos-orange;
+            border: none;
+          }
+          .custom-checkbox input:checked + .checkmark:after {
+            display: block;
+          }
+
+          .custom-checkbox .checkmark:after {
+            left: 6px;
+            top: 3px;
+            width: 4px;
+            height: 8px;
+            border: solid white;
+            border-width: 0 2px 2px 0;
+            transform: rotate(45deg);
+          }
+
+          .custom-checkbox {
+            display: flex;
+            gap: 8px;
+            align-items: center;
+            font-weight: 400;
+            font-size: 14px;
+            color: $ailos-black;
+            cursor: pointer;
+          }
+        }
+      }
+      .footer-content {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        button {
+          font-weight: 600;
+          border-radius: 2px;
+          font-size: 16px;
+          line-height: 22px;
+          padding: 13px 25px;
         }
       }
     }

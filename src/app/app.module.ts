@@ -14,6 +14,7 @@ import { NgxMaskDirective, NgxMaskPipe, provideNgxMask } from 'ngx-mask';
 import { AlertModalComponent } from './components/alert-modal/alert-modal.component';
 import { MatDialogModule } from '@angular/material/dialog';
 import { BreadcrumbModule, BreadcrumbService } from 'xng-breadcrumb';
+import { CustomCheckboxComponent } from './components/custom-checkbox/custom-checkbox.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { BreadcrumbModule, BreadcrumbService } from 'xng-breadcrumb';
     HeaderComponent,
     NewCooperateAdmissionComponent,
     AlertModalComponent,
+    CustomCheckboxComponent,
   ],
   imports: [
     BrowserModule,
