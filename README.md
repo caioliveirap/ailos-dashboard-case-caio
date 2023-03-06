@@ -14,31 +14,37 @@ Este é um projeto para o processo seletivo da Empresa GFT. O projeto foi desenv
 Há dois caminhos possíveis, o primeiro sendo de CPF válido, e outro de CPF inválido (tanto em formatação quanto CPF não encontrado na database). A fim de simular uma situação real de requisição, coloquei um timeout na função junto a um loading, além disso, há os seguintes dados de mockup:
 
 ```
-Name: Ana Luiza da Silva Santos
+Nome: Mariane de Sousa Oliveira,
+CPF do Cooperado: 11122233344,
+CPF regular: true,
+Número da conta de aplicação: 557932-4,
+Número da conta corrente: 778461-8,
+
+Nome: Ana Luiza da Silva Santos
 CPF do Cooperado: 44455566677
 CPF regular: false
 Número da conta de aplicação: 111222-3
 Número da conta corrente: 444444-1
 
-Name: Pedro Henrique Alves Costa
+Nome: Pedro Henrique Alves Costa
 CPF do Cooperado: 88899900011
 CPF Regular: true
 Número da conta de aplicação: 777888-2
 Número da conta corrente: 222111-9
 
-Name: Gabriela Lima Santos
+Nome: Gabriela Lima Santos
 CPF do Cooperado: 33344455566
 CPF Regular: true
 Número da conta de aplicação: 123456-7
 Número da conta corrente: 987654-3
 
-Name: Lucas Oliveira Rodrigues
+Nome: Lucas Oliveira Rodrigues
 CPF do Cooperado: 66677788899
 CPF Regular: true
 Número da conta de aplicação: 444555-6
 Número da conta corrente: 333222-0
 
-Name: Isabela Fernandes Souza
+Nome: Isabela Fernandes Souza
 CPF do Cooperado: 11122233344
 CPF Regular: true
 Número da conta de aplicação: 555444-3
